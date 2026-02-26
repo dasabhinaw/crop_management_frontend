@@ -1,0 +1,607 @@
+/* styles/hourly.module.css */
+.hourlyContainer {
+  padding: 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.header {
+  margin-bottom: 24px;
+  color: white;
+}
+
+.headerMain {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.headerMain h1 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.headerControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.timeRange {
+  display: flex;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+}
+
+.timeButton {
+  padding: 8px 16px;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.timeButton:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.timeButton.active {
+  background: white;
+  color: #667eea;
+}
+
+.viewToggle {
+  display: flex;
+  gap: 8px;
+}
+
+.viewButton {
+  padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.viewButton:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.viewButton.active {
+  background: white;
+  color: #667eea;
+  border-color: white;
+}
+
+.currentOverview {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.currentWeather {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.currentTemp h2 {
+  margin: 0;
+  font-size: 3rem;
+  color: #2c3e50;
+  font-weight: 300;
+}
+
+.currentTemp p {
+  margin: 8px 0 0 0;
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+.currentCondition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.weatherIconLarge {
+  font-size: 3rem;
+}
+
+.weatherText {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.currentDetails {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.detailCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.detailCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.detailCard svg {
+  color: #667eea;
+}
+
+.detailLabel {
+  display: block;
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-bottom: 4px;
+}
+
+.detailValue {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.metricsSelector {
+  margin-bottom: 24px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.metricButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.metricButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: white;
+  border: 2px solid;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 140px;
+}
+
+.metricButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.metricButton.active {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.metricIcon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.metricName {
+  font-weight: 500;
+  color: #2c3e50;
+  font-size: 0.95rem;
+}
+
+.mainContent {
+  margin-bottom: 24px;
+}
+
+.chartSection, .gridSection {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.chartHeader {
+  margin-bottom: 24px;
+}
+
+.chartHeader h3 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #2c3e50;
+  font-size: 1.5rem;
+}
+
+.chartSubtitle {
+  margin-left: 12px;
+  font-size: 1rem;
+  color: #6c757d;
+  font-weight: normal;
+}
+
+.chartContainer {
+  height: 350px;
+}
+
+.gridHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.gridHeader h3 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #2c3e50;
+  font-size: 1.5rem;
+}
+
+.currentIndicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.currentDot {
+  width: 12px;
+  height: 12px;
+  background: #ff6b6b;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.hourlyGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.dateGroup {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.dateHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.dateHeader h4 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.2rem;
+}
+
+.dateSummary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dateSummary span:first-child {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.weatherIcon {
+  font-size: 1.5rem;
+}
+
+.hoursGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 12px;
+}
+
+.hourCard {
+  padding: 16px;
+  background: white;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.hourCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.hourCard.currentHour {
+  border-color: #ff6b6b;
+  background: #fff5f5;
+}
+
+.hourTime {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+  color: #6c757d;
+  font-size: 0.85rem;
+}
+
+.hourTime svg {
+  width: 14px;
+  height: 14px;
+}
+
+.hourWeather {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.hourWeather .weatherIcon {
+  font-size: 1.8rem;
+}
+
+.temperature {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.hourDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.detailItem svg {
+  width: 12px;
+  height: 12px;
+}
+
+.insights {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.insights h3 {
+  margin: 0 0 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #2c3e50;
+  font-size: 1.5rem;
+}
+
+.insightsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.insightCard {
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+  transition: transform 0.3s ease;
+}
+
+.insightCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.insightTime {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.insightHour {
+  display: block;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 1.1rem;
+}
+
+.insightDate {
+  display: block;
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.insightWeather {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.insightIcon {
+  font-size: 2.5rem;
+}
+
+.insightTemp {
+  text-align: right;
+}
+
+.tempValue {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.tempFeels {
+  display: block;
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-top: 4px;
+}
+
+.insightDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.insightDetail {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.insightDetail span {
+  color: #6c757d;
+}
+
+.insightDetail strong {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.precipitation {
+  color: #0984e3 !important;
+}
+
+.footer {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer p {
+  margin: 0 0 8px 0;
+  font-size: 0.95rem;
+}
+
+.footer small {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+}
+
+@media (max-width: 768px) {
+  .hourlyContainer {
+    padding: 16px;
+  }
+  
+  .headerMain {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .headerControls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .timeRange {
+    justify-content: center;
+  }
+  
+  .viewToggle {
+    justify-content: center;
+  }
+  
+  .currentDetails {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .metricButtons {
+    justify-content: center;
+  }
+  
+  .metricButton {
+    min-width: 120px;
+  }
+  
+  .hoursGrid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+  
+  .insightsGrid {
+    grid-template-columns: 1fr;
+  }
+}

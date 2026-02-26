@@ -1,0 +1,1338 @@
+/* styles/nepali-season/crop-season-overview.module.css */
+
+.overviewContainer {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 32px;
+  }
+  
+  .headerMain {
+    flex: 1;
+  }
+  
+  .headerMain h2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .subtitle {
+    color: #666;
+    font-size: 0.875rem;
+    margin: 0;
+  }
+  
+  .headerActions {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .addButton,
+  .exportButton,
+  .refreshButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .addButton {
+    background: #667eea;
+    color: white;
+    border: none;
+    text-decoration: none;
+  }
+  
+  .addButton:hover {
+    background: #5a67d8;
+    transform: translateY(-1px);
+  }
+  
+  .exportButton {
+    background: white;
+    color: #667eea;
+    border: 1px solid #667eea;
+  }
+  
+  .exportButton:hover {
+    background: #667eea10;
+  }
+  
+  .refreshButton {
+    background: white;
+    color: #666;
+    border: 1px solid #dee2e6;
+  }
+  
+  .refreshButton:hover {
+    background: #f8f9fa;
+  }
+  
+  /* Stats Overview */
+  .statsOverview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  
+  .statCard {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    transition: all 0.2s;
+  }
+  
+  .statCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .statIcon {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .statContent {
+    flex: 1;
+  }
+  
+  .statValue {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  
+  .statLabel {
+    font-size: 0.75rem;
+    color: #666;
+    font-weight: 500;
+  }
+  
+  /* Controls Bar */
+  .controlsBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding: 16px;
+    background: #f8f9fa;
+    border-radius: 12px;
+  }
+  
+  .searchContainer {
+    flex: 1;
+    max-width: 400px;
+    position: relative;
+  }
+  
+  .searchIcon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+  }
+  
+  .searchInput {
+    width: 100%;
+    padding: 10px 12px 10px 40px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    color: #333;
+    background: white;
+    transition: border-color 0.2s;
+  }
+  
+  .searchInput:focus {
+    outline: none;
+    border-color: #667eea;
+  }
+  
+  .clearSearch {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    padding: 4px;
+  }
+  
+  .clearSearch:hover {
+    color: #666;
+  }
+  
+  .viewControls {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  
+  .viewToggle {
+    display: flex;
+    gap: 4px;
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 4px;
+  }
+  
+  .viewButton {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .viewButton:hover {
+    background: #f8f9fa;
+  }
+  
+  .viewButton.active {
+    background: #667eea;
+  }
+  
+  .viewButton.active .gridSquare,
+  .viewButton.active .listLine {
+    background: white;
+  }
+  
+  .gridIcon {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    width: 16px;
+    height: 16px;
+  }
+  
+  .gridSquare {
+    width: 100%;
+    height: 100%;
+    background: #666;
+    border-radius: 1px;
+  }
+  
+  .listIcon {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 16px;
+    height: 16px;
+  }
+  
+  .listLine {
+    width: 100%;
+    height: 3px;
+    background: #666;
+    border-radius: 1px;
+  }
+  
+  .filterButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: white;
+    color: #666;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+  }
+  
+  .filterButton:hover {
+    background: #f8f9fa;
+  }
+  
+  .filterBadge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    background: #f44336;
+    color: white;
+    border-radius: 9px;
+    font-size: 0.625rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Filter Panel */
+  .filterPanel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    margin-bottom: 24px;
+  }
+  
+  .filterPanel.show {
+    max-height: 500px;
+  }
+  
+  .filterHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 16px;
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 12px 12px 0 0;
+  }
+  
+  .filterHeader h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+  }
+  
+  .clearFilters {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: #f8f9fa;
+    color: #666;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .clearFilters:hover {
+    background: #e9ecef;
+  }
+  
+  .filterGroup {
+    margin-bottom: 16px;
+    padding: 0 16px;
+  }
+  
+  .filterGroup:last-child {
+    margin-bottom: 0;
+  }
+  
+  .filterGroup label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .filterOptions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .filterOption {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .filterOption:hover {
+    border-color: #667eea;
+    color: #667eea;
+  }
+  
+  .filterOption.active {
+    background: #667eea;
+    border-color: #667eea;
+    color: white;
+  }
+  
+  .cropIcon {
+    font-size: 1rem;
+  }
+  
+  .sortOptions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .sortOption {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 12px;
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .sortOption:hover {
+    border-color: #667eea;
+    color: #667eea;
+  }
+  
+  .sortOption.active {
+    background: #667eea;
+    border-color: #667eea;
+    color: white;
+  }
+  
+  .sortOrder {
+    font-size: 0.875rem;
+  }
+  
+  /* Seasons Grid/List */
+  .seasonsContent {
+    margin-bottom: 32px;
+  }
+  
+  /* Grid View */
+  .seasonsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+  }
+  
+  .seasonCard {
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.2s;
+    position: relative;
+  }
+  
+  .seasonCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+  
+  .seasonCard.current {
+    border: 2px solid #667eea;
+  }
+  
+  .cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  .seasonBadge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: white;
+  }
+  
+  .cardActions {
+    display: flex;
+    gap: 4px;
+  }
+  
+  .actionButton {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+  }
+  
+  .actionButton:hover {
+    background: #667eea;
+    border-color: #667eea;
+    color: white;
+  }
+  
+  .cardContent {
+    padding: 16px;
+  }
+  
+  .seasonName {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 4px 0;
+  }
+  
+  .seasonNepaliName {
+    font-size: 0.875rem;
+    color: #666;
+    margin: 0 0 12px 0;
+    font-family: 'Noto Sans Devanagari', sans-serif;
+  }
+  
+  .dateRange {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    color: #666;
+    margin-bottom: 12px;
+  }
+  
+  .duration {
+    color: #999;
+  }
+  
+  .description {
+    font-size: 0.875rem;
+    color: #666;
+    line-height: 1.4;
+    margin: 0;
+  }
+  
+  .readMore {
+    display: inline-block;
+    color: #667eea;
+    background: none;
+    border: none;
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-left: 4px;
+  }
+  
+  .readMore:hover {
+    text-decoration: underline;
+  }
+  
+  .primaryCrops {
+    padding: 0 16px 16px;
+  }
+  
+  .primaryCrops h4 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 8px 0;
+  }
+  
+  .cropsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .cropTag {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    color: #666;
+  }
+  
+  .noCrops {
+    font-size: 0.75rem;
+    color: #999;
+    font-style: italic;
+  }
+  
+  .keyMetrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 0 16px 16px;
+  }
+  
+  .metric {
+    text-align: center;
+    padding: 8px;
+    background: #fafbfc;
+    border-radius: 8px;
+  }
+  
+  .metricHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-size: 0.625rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+  
+  .metricValue {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #333;
+    line-height: 1;
+    margin-bottom: 2px;
+  }
+  
+  .metricLabel {
+    font-size: 0.625rem;
+    color: #999;
+  }
+  
+  .progressSection {
+    padding: 0 16px 16px;
+  }
+  
+  .progressHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    color: #666;
+    margin-bottom: 4px;
+  }
+  
+  .progressBar {
+    height: 6px;
+    background: #e9ecef;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  
+  .progressFill {
+    height: 100%;
+    transition: width 0.3s ease;
+  }
+  
+  .weatherIntegration {
+    padding: 12px 16px;
+    background: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+  }
+  
+  .weatherStatus {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    color: #666;
+  }
+  
+  .successIcon {
+    color: #4caf50;
+  }
+  
+  .warningIcon {
+    color: #ff9800;
+  }
+  
+  .lastUpdated {
+    margin-left: auto;
+    color: #999;
+    font-size: 0.625rem;
+  }
+  
+  .expandedContent {
+    padding: 16px;
+    background: #fafbfc;
+    border-top: 1px solid #e9ecef;
+  }
+  
+  .expandedSection {
+    margin-bottom: 16px;
+  }
+  
+  .expandedSection:last-child {
+    margin-bottom: 0;
+  }
+  
+  .expandedSection h5 {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 8px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .regionsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  
+  .regionTag {
+    padding: 2px 8px;
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    color: #666;
+  }
+  
+  .intercropsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  
+  .intercropTag {
+    padding: 2px 8px;
+    background: #e8f5e8;
+    border: 1px solid #4caf50;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    color: #4caf50;
+  }
+  
+  .rainfallInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .rainfallValue {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #0984e3;
+  }
+  
+  .rainfallLabel {
+    font-size: 0.75rem;
+    color: #666;
+  }
+  
+  .cardFooter {
+    padding: 16px;
+    border-top: 1px solid #e9ecef;
+  }
+  
+  .footerActions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .detailsButton {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 12px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+  }
+  
+  .detailsButton:hover {
+    background: #5a67d8;
+  }
+  
+  .weatherButton {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 12px;
+    background: white;
+    color: #0984e3;
+    border: 1px solid #0984e3;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .weatherButton:hover {
+    background: #0984e310;
+  }
+  
+  /* List View */
+  .listView .seasonsList {
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .listHeader {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+    gap: 16px;
+    padding: 16px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .listRow {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+    gap: 16px;
+    padding: 16px;
+    border-bottom: 1px solid #e9ecef;
+    transition: all 0.2s;
+  }
+  
+  .listRow:hover {
+    background: #fafbfc;
+  }
+  
+  .listRow.current {
+    background: #667eea08;
+  }
+  
+  .listRow:last-child {
+    border-bottom: none;
+  }
+  
+  .listSeason,
+  .listCrops,
+  .listDuration,
+  .listWater,
+  .listYield,
+  .listWeather,
+  .listStatus,
+  .listActions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .seasonInfo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .seasonDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  
+  .seasonDetails {
+    flex: 1;
+  }
+  
+  .seasonName {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 2px;
+  }
+  
+  .seasonNepali {
+    font-size: 0.75rem;
+    color: #666;
+    font-family: 'Noto Sans Devanagari', sans-serif;
+  }
+  
+  .cropsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  
+  .cropTag {
+    padding: 2px 6px;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 12px;
+    font-size: 0.625rem;
+    color: #666;
+    white-space: nowrap;
+  }
+  
+  .moreCrops {
+    font-size: 0.625rem;
+    color: #999;
+  }
+  
+  .durationInfo,
+  .waterInfo,
+  .yieldInfo,
+  .weatherInfo {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.75rem;
+    color: #666;
+  }
+  
+  .waterStatus,
+  .yieldStatus {
+    font-size: 0.625rem;
+    font-weight: 500;
+    margin-left: 4px;
+  }
+  
+  .hasWeather,
+  .noWeather {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+  
+  .hasWeather {
+    color: #4caf50;
+  }
+  
+  .noWeather {
+    color: #ff9800;
+  }
+  
+  .currentStatus,
+  .completedStatus,
+  .upcomingStatus {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+  
+  .currentStatus {
+    color: #667eea;
+  }
+  
+  .completedStatus {
+    color: #4caf50;
+  }
+  
+  .upcomingStatus {
+    color: #ff9800;
+  }
+  
+  .progressMini {
+    flex: 1;
+    height: 4px;
+    background: #e9ecef;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  
+  .listActions {
+    display: flex;
+    gap: 4px;
+    justify-content: flex-end;
+  }
+  
+  /* Empty State */
+  .emptyState {
+    text-align: center;
+    padding: 48px 24px;
+    color: #999;
+  }
+  
+  .emptyState h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #666;
+    margin: 16px 0 8px 0;
+  }
+  
+  .emptyState p {
+    font-size: 0.875rem;
+    margin: 0 0 24px 0;
+  }
+  
+  .clearFiltersButton,
+  .addFirstButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+  }
+  
+  .clearFiltersButton {
+    background: white;
+    color: #666;
+    border: 1px solid #dee2e6;
+  }
+  
+  .clearFiltersButton:hover {
+    background: #f8f9fa;
+  }
+  
+  .addFirstButton {
+    background: #667eea;
+    color: white;
+    border: none;
+  }
+  
+  .addFirstButton:hover {
+    background: #5a67d8;
+  }
+  
+  /* Pagination */
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background: #f8f9fa;
+    border-radius: 12px;
+  }
+  
+  .paginationInfo {
+    font-size: 0.875rem;
+    color: #666;
+  }
+  
+  .paginationControls {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  
+  .pageButton {
+    padding: 6px 12px;
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .pageButton:hover:not(:disabled) {
+    border-color: #667eea;
+    color: #667eea;
+  }
+  
+  .pageButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .pageNumbers {
+    display: flex;
+    gap: 4px;
+  }
+  
+  .pageNumber {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .pageNumber:hover {
+    border-color: #667eea;
+    color: #667eea;
+  }
+  
+  .pageNumber.active {
+    background: #667eea;
+    border-color: #667eea;
+    color: white;
+  }
+  
+  .pageEllipsis {
+    padding: 0 8px;
+    color: #999;
+    font-size: 0.75rem;
+  }
+  
+  /* Current Season Summary */
+  .currentSeasonSummary {
+    margin-top: 32px;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .summaryHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  .summaryHeader h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+  }
+  
+  .summaryToggle {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .summaryToggle:hover {
+    background: #f8f9fa;
+  }
+  
+  .currentSeasonsList {
+    padding: 16px;
+  }
+  
+  .currentSeasonCard {
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+    transition: all 0.2s;
+  }
+  
+  .currentSeasonCard:hover {
+    border-color: #667eea;
+    transform: translateX(2px);
+  }
+  
+  .currentSeasonCard:last-child {
+    margin-bottom: 0;
+  }
+  
+  .currentSeasonInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .currentSeasonName {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .currentSeasonDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  
+  .currentSeasonName h4 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+  }
+  
+  .currentProgress {
+    font-size: 0.75rem;
+    color: #667eea;
+    font-weight: 500;
+    margin-left: 8px;
+  }
+  
+  .currentSeasonActions {
+    flex-shrink: 0;
+  }
+  
+  .viewButton {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+  }
+  
+  .viewButton:hover {
+    background: #5a67d8;
+  }
+  
+  .currentSeasonProgress {
+    width: 100%;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .seasonsGrid {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .header {
+      flex-direction: column;
+      gap: 16px;
+    }
+    
+    .headerActions {
+      width: 100%;
+      justify-content: flex-end;
+    }
+    
+    .statsOverview {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .controlsBar {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    
+    .searchContainer {
+      max-width: none;
+    }
+    
+    .listHeader,
+    .listRow {
+      grid-template-columns: 2fr 1.5fr 1fr 1fr 1fr;
+      overflow-x: auto;
+    }
+    
+    .listHeader > *:nth-child(6),
+    .listHeader > *:nth-child(7),
+    .listHeader > *:nth-child(8),
+    .listRow > *:nth-child(6),
+    .listRow > *:nth-child(7),
+    .listRow > *:nth-child(8) {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .statsOverview {
+      grid-template-columns: 1fr;
+    }
+    
+    .seasonsGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .recommendationsGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .pagination {
+      flex-direction: column;
+      gap: 16px;
+      text-align: center;
+    }
+    
+    .listHeader,
+    .listRow {
+      grid-template-columns: 2fr 1fr 1fr;
+    }
+    
+    .listHeader > *:nth-child(3),
+    .listHeader > *:nth-child(4),
+    .listHeader > *:nth-child(5),
+    .listRow > *:nth-child(3),
+    .listRow > *:nth-child(4),
+    .listRow > *:nth-child(5) {
+      display: none;
+    }
+  }

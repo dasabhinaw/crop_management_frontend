@@ -1,0 +1,347 @@
+/* styles/nepali-season/weather-coverage-chart.module.css */
+
+.chartContainer {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+  }
+  
+  .chartHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 32px;
+  }
+  
+  .headerMain {
+    flex: 1;
+  }
+  
+  .headerMain h3 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 16px;
+  }
+  
+  .statsSummary {
+    display: flex;
+    gap: 24px;
+  }
+  
+  .statItem {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .statValue {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #667eea;
+    line-height: 1;
+  }
+  
+  .statLabel {
+    font-size: 0.875rem;
+    color: #666;
+    font-weight: 500;
+  }
+  
+  .chartControls {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .controlGroup {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .controlLabel {
+    font-size: 0.875rem;
+    color: #666;
+    font-weight: 500;
+    min-width: 80px;
+  }
+  
+  .controlButtons {
+    display: flex;
+    gap: 4px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 4px;
+  }
+  
+  .controlButton {
+    padding: 6px 12px;
+    border: none;
+    background: transparent;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .controlButton:hover {
+    background: #fff;
+    color: #333;
+  }
+  
+  .controlButton.active {
+    background: white;
+    color: #667eea;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .exportButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .exportButton:hover {
+    background: #5a67d8;
+    transform: translateY(-1px);
+  }
+  
+  /* Main Chart Section */
+  .mainChartSection {
+    margin-bottom: 32px;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 20px;
+    background: #fafbfc;
+  }
+  
+  .chartTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .chartTitle h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .seasonFilters {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .seasonFilter {
+    padding: 6px 12px;
+    border: 1px solid #dee2e6;
+    background: white;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .seasonFilter:hover {
+    border-color: #667eea;
+    color: #667eea;
+  }
+  
+  .seasonFilter.active {
+    border-color: #667eea;
+    background: #667eea20;
+    color: #667eea;
+  }
+  
+  .chartWrapper {
+    height: 300px;
+    margin-top: 20px;
+  }
+  
+  /* Custom Tooltip */
+  .customTooltip {
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tooltipLabel {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 0.875rem;
+  }
+  
+  .tooltipItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 4px 0;
+    font-size: 0.75rem;
+  }
+  
+  .tooltipDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+  
+  .tooltipName {
+    color: #666;
+    min-width: 80px;
+  }
+  
+  .tooltipValue {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Secondary Charts */
+  .secondaryCharts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+  
+  .secondaryChart {
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 16px;
+    background: white;
+  }
+  
+  .secondaryChart .chartTitle {
+    margin-bottom: 16px;
+  }
+  
+  .secondaryChart .chartTitle h5 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+  }
+  
+  /* Quality Indicators */
+  .qualityIndicators {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  
+  .indicatorCard {
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 16px;
+    transition: transform 0.2s;
+  }
+  
+  .indicatorCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .indicatorHeader {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .indicatorIcon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+  }
+  
+  .indicatorHeader h5 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+  }
+  
+  .indicatorContent {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .trendValue {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+  
+  .trendLabel {
+    font-size: 0.75rem;
+    color: #666;
+    line-height: 1.2;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .chartHeader {
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .statsSummary {
+      justify-content: space-between;
+    }
+    
+    .secondaryCharts {
+      grid-template-columns: 1fr;
+    }
+    
+    .qualityIndicators {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .statsSummary {
+      flex-wrap: wrap;
+    }
+    
+    .chartControls {
+      width: 100%;
+    }
+    
+    .seasonFilters {
+      flex-wrap: wrap;
+    }
+    
+    .qualityIndicators {
+      grid-template-columns: 1fr;
+    }
+  }

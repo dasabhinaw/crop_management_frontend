@@ -1,0 +1,338 @@
+/* styles/nepali-season/calendar.module.css */
+.calendarContainer {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  .calendarHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .calendarHeader h2 {
+    font-size: 1.5rem;
+    color: #2d3748;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0;
+  }
+  
+  .yearNavigation {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .navButton {
+    background: #f1f5f9;
+    border: none;
+    border-radius: 8px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .navButton:hover {
+    background: #3b82f6;
+    color: white;
+    transform: translateY(-2px);
+  }
+  
+  .currentYear {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2d3748;
+    min-width: 80px;
+    text-align: center;
+  }
+  
+  .seasonLegend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+  }
+  
+  .legendItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: #4a5568;
+  }
+  
+  .legendColor {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+  }
+  
+  .legendColor.summer {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+  }
+  
+  .legendColor.monsoon {
+    background: linear-gradient(135deg, #0984e3 0%, #4da8ff 100%);
+  }
+  
+  .legendColor.autumn {
+    background: linear-gradient(135deg, #ff9800 0%, #ffb74d 100%);
+  }
+  
+  .legendColor.winter {
+    background: linear-gradient(135deg, #4d96ff 0%, #6cb2ff 100%);
+  }
+  
+  .legendColor.spring {
+    background: linear-gradient(135deg, #4caf50 0%, #81c784 100%);
+  }
+  
+  .monthsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .monthCard {
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .monthCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-color: #cbd5e1;
+  }
+  
+  .monthCard.selected {
+    border-color: #3b82f6;
+    background: linear-gradient(135deg, #667eea10 0%, #764ba210 100%);
+    box-shadow: 0 8px 30px rgba(102, 126, 234, 0.15);
+  }
+  
+  .monthCard.hasWeatherData {
+    border-left: 4px solid #10b981;
+  }
+  
+  .monthHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+  
+  .monthNumber {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.125rem;
+  }
+  
+  .seasonIcon {
+    color: #64748b;
+  }
+  
+  .monthName {
+    margin-bottom: 0.5rem;
+  }
+  
+  .nepaliName {
+    font-family: 'Noto Sans Devanagari', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 0.25rem;
+  }
+  
+  .englishName {
+    font-size: 0.875rem;
+    color: #64748b;
+    font-weight: 500;
+  }
+  
+  .dateRange {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+  }
+  
+  .weatherIndicator {
+    margin-bottom: 0.75rem;
+  }
+  
+  .noDataIndicator {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    background: #fef2f2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+  
+  .confidenceIndicator {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    color: white;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  
+  .weatherPreview {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .weatherMetric {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.75rem;
+    color: #4a5568;
+    background: #f8fafc;
+    padding: 0.375rem;
+    border-radius: 6px;
+  }
+  
+  .festivalIndicator {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding-top: 0.5rem;
+    border-top: 1px dashed #e2e8f0;
+  }
+  
+  .festivalDot {
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+    border-radius: 50%;
+  }
+  
+  .festivalCount {
+    font-size: 0.75rem;
+    color: #64748b;
+  }
+  
+  /* Season-specific styles */
+  .season-summer .monthCard {
+    border-top: 3px solid #ff6b6b;
+  }
+  
+  .season-monsoon .monthCard {
+    border-top: 3px solid #0984e3;
+  }
+  
+  .season-autumn .monthCard {
+    border-top: 3px solid #ff9800;
+  }
+  
+  .season-winter .monthCard {
+    border-top: 3px solid #4d96ff;
+  }
+  
+  .season-spring .monthCard {
+    border-top: 3px solid #4caf50;
+  }
+  
+  .calendarFooter {
+    padding-top: 1.5rem;
+    border-top: 1px solid #e2e8f0;
+  }
+  
+  .dataSourceInfo h4 {
+    margin: 0 0 0.75rem 0;
+    color: #4a5568;
+    font-size: 0.875rem;
+  }
+  
+  .sourceLegend {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  
+  .sourceItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    color: #64748b;
+  }
+  
+  .sourceDot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+  
+  .sourceDot.high {
+    background: #10b981;
+  }
+  
+  .sourceDot.medium {
+    background: #f59e0b;
+  }
+  
+  .sourceDot.low {
+    background: #ef4444;
+  }
+  
+  .sourceDot.none {
+    background: #94a3b8;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .monthsGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .monthsGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .seasonLegend {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .sourceLegend {
+      grid-template-columns: 1fr;
+    }
+  }

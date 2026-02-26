@@ -1,0 +1,695 @@
+/* styles/nepali-season/month-detail.module.css */
+.detailContainer {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  /* Header Styles */
+  .header {
+    background: white;
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+  }
+  
+  .headerTop {
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e2e8f0;
+    background: #f8fafc;
+  }
+  
+  .backButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    color: #4a5568;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .backButton:hover {
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+    transform: translateX(-2px);
+  }
+  
+  .headerActions {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .iconButton {
+    background: none;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .iconButton:hover {
+    background: #3b82f6;
+    color: white;
+    border-color: #3b82f6;
+    transform: translateY(-2px);
+  }
+  
+  .headerMain {
+    padding: 2rem 1.5rem;
+  }
+  
+  .monthIdentity {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .monthNumber {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  .monthNames h1 {
+    font-family: 'Noto Sans Devanagari', sans-serif;
+    font-size: 2.5rem;
+    color: #2d3748;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.2;
+  }
+  
+  .monthNames h2 {
+    font-size: 1.5rem;
+    color: #64748b;
+    margin: 0;
+    font-weight: 500;
+  }
+  
+  .monthMetadata {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .seasonBadge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #f1f5f9;
+    border-radius: 20px;
+    color: #4a5568;
+    font-weight: 500;
+  }
+  
+  .qualityBadge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    color: white;
+    font-weight: 500;
+  }
+  
+  .qualityBadge.high {
+    background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+  }
+  
+  .qualityBadge.medium {
+    background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+  }
+  
+  .qualityBadge.low {
+    background: linear-gradient(135deg, #ef4444 0%, #f87171 100%);
+  }
+  
+  .dateRange {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #e0f2fe;
+    border-radius: 20px;
+    color: #0369a1;
+    font-weight: 500;
+  }
+  
+  /* Quick Stats */
+  .quickStats {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .statCard {
+    background: white;
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+  }
+  
+  .statCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-color: #3b82f6;
+  }
+  
+  .statIcon {
+    padding: 0.75rem;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #667eea20 0%, #764ba220 100%);
+    color: #667eea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .statContent {
+    flex: 1;
+  }
+  
+  .statValue {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2d3748;
+    display: block;
+    line-height: 1.2;
+  }
+  
+  .statLabel {
+    font-size: 0.75rem;
+    color: #64748b;
+    display: block;
+    margin-top: 0.25rem;
+  }
+  
+  /* Action Bar */
+  .actionBar {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+  
+  .actionBar button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .editButton {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+  }
+  
+  .editButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+  }
+  
+  .autoFillButton {
+    background: #10b981;
+    color: white;
+  }
+  
+  .autoFillButton:hover {
+    background: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
+  }
+  
+  .compareButton {
+    background: #f1f5f9;
+    color: #4a5568;
+  }
+  
+  .compareButton:hover {
+    background: #e2e8f0;
+    transform: translateY(-2px);
+  }
+  
+  .bookmarkButton {
+    background: white;
+    color: #4a5568;
+    border: 1px solid #e2e8f0 !important;
+  }
+  
+  .bookmarkButton:hover {
+    background: #f8fafc;
+    transform: translateY(-2px);
+  }
+  
+  /* Tab Navigation */
+  .tabNavigation {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    overflow-x: auto;
+    padding: 0.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+  
+  .tabButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: none;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    color: #64748b;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+  }
+  
+  .tabButton:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+  }
+  
+  .tabButton.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: #667eea;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+  }
+  
+  /* Tab Content */
+  .tabContent {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 1.5rem;
+  }
+  
+  .overviewGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .sectionCard {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid #e2e8f0;
+  }
+  
+  .sectionCard h3 {
+    margin: 0 0 1rem 0;
+    color: #2d3748;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .weatherSummary {
+    line-height: 1.6;
+    color: #4a5568;
+  }
+  
+  .noDataMessage {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .noDataMessage p {
+    margin: 1rem 0;
+    color: #64748b;
+  }
+  
+  .addDataButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .addDataButton:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+  }
+  
+  /* Weather Tab */
+  .weatherHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .dataSourceInfo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.875rem;
+    color: #64748b;
+  }
+  
+  .sourceLabel {
+    font-weight: 500;
+  }
+  
+  .sourceValue {
+    background: #e0f2fe;
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+    color: #0369a1;
+  }
+  
+  .updateInfo {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  
+  .addWeatherButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .addWeatherButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+  }
+  
+  .weatherGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .weatherSection {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid #e2e8f0;
+  }
+  
+  .weatherSection h3 {
+    margin: 0 0 1rem 0;
+    color: #2d3748;
+  }
+  
+  .temperatureMetrics,
+  .precipitationMetrics,
+  .windSunMetrics {
+    display: grid;
+    gap: 0.75rem;
+  }
+  
+  .tempMetric,
+  .precipMetric,
+  .windSunMetric {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    background: #f8fafc;
+    border-radius: 8px;
+  }
+  
+  .metricLabel {
+    font-weight: 500;
+    color: #4a5568;
+  }
+  
+  .metricValue {
+    font-weight: 600;
+    color: #2d3748;
+    font-size: 1.125rem;
+  }
+  
+  .chartSection {
+    grid-column: span 2;
+  }
+  
+  .chartContainer {
+    height: 300px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    padding: 1rem;
+  }
+  
+  .noWeatherData {
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  
+  .noWeatherData h3 {
+    margin: 1.5rem 0 0.5rem 0;
+    color: #2d3748;
+  }
+  
+  .noWeatherData p {
+    color: #64748b;
+    max-width: 500px;
+    margin: 0 auto 2rem;
+  }
+  
+  .noDataActions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .primaryAction,
+  .secondaryAction {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .primaryAction {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+  }
+  
+  .primaryAction:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+  }
+  
+  .secondaryAction {
+    background: #f1f5f9;
+    color: #4a5568;
+  }
+  
+  .secondaryAction:hover {
+    background: #e2e8f0;
+    transform: translateY(-2px);
+  }
+  
+  /* Related Content */
+  .relatedContent {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 1.5rem;
+  }
+  
+  .relatedContent h3 {
+    margin: 0 0 1.5rem 0;
+    color: #2d3748;
+  }
+  
+  .relatedGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  
+  .relatedCard {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 1.25rem;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+  }
+  
+  .relatedCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-color: #3b82f6;
+  }
+  
+  .relatedCard h4 {
+    margin: 0 0 0.75rem 0;
+    color: #2d3748;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .relatedCard p {
+    margin: 0 0 0.5rem 0;
+    color: #4a5568;
+    font-size: 0.875rem;
+  }
+  
+  .relatedMeta {
+    font-size: 0.75rem;
+    color: #94a3b8;
+  }
+  
+  /* Month Navigation */
+  .monthNavigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  .navButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    color: #4a5568;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .navButton:hover {
+    background: #3b82f6;
+    color: white;
+    border-color: #3b82f6;
+    transform: translateY(-2px);
+  }
+  
+  .currentMonth {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #2d3748;
+  }
+  
+  .loadingContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .quickStats {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .overviewGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .relatedGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .quickStats {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .actionBar {
+      flex-wrap: wrap;
+    }
+    
+    .weatherGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .chartSection {
+      grid-column: span 1;
+    }
+    
+    .relatedGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .monthNavigation {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+    
+    .monthIdentity {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+    
+    .monthNames h1 {
+      font-size: 2rem;
+    }
+  }
